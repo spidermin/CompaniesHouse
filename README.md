@@ -42,7 +42,7 @@ The company must be must be active in order to gain credit, however if there are
 
 After spending some time searching through company numbers on the Companies House website and not finding a single company marked with insolvencies but many with liquidation, lead me to believe that these companies may in fact be in liquidation. 
 
-When running through the insolvancy API I was able to find some insolvancy data, however I noticed that any company which had this data was in some sort of liquidation.
+When running through the insolvancy API in raw form I was able to find some types of liquidation.
 
 I found three different types of liquidation data: 
 
