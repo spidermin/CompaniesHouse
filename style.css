@@ -5,6 +5,9 @@
 	padding: 1%;
 }
 
-h1 {
-	
+.error {
+	background: red; 
+	color: #fff;
+	padding: 1%;
 }
+
