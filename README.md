@@ -27,9 +27,9 @@ A switch case is used to determinte the risk score based of the type of insolven
 
 Run: 
 
-PHP version 5.6.4
+PHP version 5.6.4 required. 
 
-Edit: index.php and edit line 6 "<link rel="stylesheet" type="text/css" href="/companieshouse/style.css">" ,change path to your style sheet destination. 
+Edit: open index.php and edit line 6. Change path to your style sheet destination. 
 
 Run "index.php" Here you can enter a company number and see the app working. 
 
