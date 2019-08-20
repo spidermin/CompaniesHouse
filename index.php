@@ -41,8 +41,7 @@ if (isset($form_result)){
 
 <?php
 /// Call APIs...
-	Callapi();
-	
+	Callapi();	
 ?>	
 	
 	</div>
