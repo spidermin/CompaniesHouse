@@ -29,7 +29,7 @@ Run:
 
 PHP version 5.6.4
 
-Edit: index.php and edit line 6 "<link rel="stylesheet" type="text/css" href="/companieshouse/style.css">" and change path to your destination. 
+Edit: index.php and edit line 6 "<link rel="stylesheet" type="text/css" href="/companieshouse/style.css">" and change path to your style sheet destination. 
 
 run "index.php" Here you can enter a company number and see the app working. 
 
