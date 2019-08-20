@@ -8,6 +8,10 @@
 <?php 
 /// Included files... 
 	include '/functions.php';
+	
+// Declare vars...
+$number = $_POST['search_term'];
+$form_result = $_POST['submit'];	
 ?>
 
 <!-- Search form --> 
@@ -21,5 +25,17 @@
 	<input type="submit" name="submit" id="submit" value="submit"   />
 </form>
 <hr> 
-	
+<?php
+
+/// Validate form...
+ 
+if (isset($form_result)){
+	if (is_numeric($number)) {
+	echo '';
+	}
+	else {
+	echo '<p class="error">Error: Please enter a company number </p><br>';
+	}
+}
+?>	
 	
