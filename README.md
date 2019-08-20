@@ -12,7 +12,7 @@ Build:
 
 In order to get the required data, two API calls are needed. One being company search and the other being insolvency information. 
 
-A simple search form is required in order to passed the searched term to the API. This is also validated and trimmed.  
+A simple search form is required in order to pass the searched term to the API. This is also validated and trimmed.  
 
 
 
@@ -21,3 +21,4 @@ Run:
 
 
 Assumptions: 
+
