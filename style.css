@@ -5,13 +5,46 @@
 	padding: 1%;
 }
 
+
+.dissolved {
+	background-color: yellow;
+	padding: 1%;
+}
+
+.refused { 
+	background:  red; 
+	color: #fff; 
+	padding: 1%
+}
+
+.approved {
+	background: #95c11e;
+	padding: 1%
+}
+
+.risk-low, 
+.risk-medium, 
+.risk-high {
+	padding: 1%;
+}
+
+.risk-low {
+	background: green;
+	color: #fff;
+}
+
+.risk-medium {
+	background: orange;
+}
+
+.risk-high {
+	background: red;
+	color: #fff;
+}
+
 .error {
 	background: red; 
 	color: #fff;
 	padding: 1%;
 }
 
-.dissolved {
-	background-color: yellow;
-	padding: 1%;
-}
