@@ -95,6 +95,6 @@ curl_close($curl);
 $json = json_decode($response, true); // decode the JSON into an associative array
 
 // Handle the API response below here... 
-//echo '<p><pre>' . print_r($json, true) . '</pre></p>';
+echo '<p><pre>' . print_r($json, true) . '</pre></p>';
 
 };
