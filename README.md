@@ -18,6 +18,11 @@ Company search data is returned in JSON and decoded. The array is then put throu
 
 If the company is either disolved or in liquidation, this information will be highlighted to the user. 
 
+A second API call is made to find insolvancy data if it exists for the company. This is also returned in JSON and decoded. The type of involency is then used to risk score the company. 
+
+
+
+
 Run: 
 
 PHP version 5.6.4
