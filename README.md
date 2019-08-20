@@ -10,11 +10,16 @@ If the company is not active, return a message to the user refusing a credit acc
 
 Build: 
 
-In order to get the required data, two API calls are needed. One being company search and the other being insolvency information. 
+In order to get the required data, two API calls are needed. One being company search and the other being insolvency information. This is done using PHP CURL. 
 
 A simple search form is required in order to pass the searched term to the API. This is also validated and trimmed.  
 
+Company search data is returned in JSON and decoded. The array is then put through a foreach loop in order to echo the data in case more than one company appears. an If statement is then used in order to find the status of the company to see if it is active, disolved or in liquidation. 
 
+If the company is either disolved or in liquidation, this information will be highlighted to the user. 
+
+
+ 
 
 
 Run: 
