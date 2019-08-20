@@ -8,12 +8,15 @@
 <?php 
 /// Included files... 
 	include '/functions.php';
-	
+
 // Declare vars...
 $number = $_POST['search_term'];
-$form_result = $_POST['submit'];	
-?>
+$form_result = $_POST['submit'];
 
+
+
+?>
+	
 <!-- Search form --> 
 <body>
 	<div id="main-container">
@@ -41,10 +44,17 @@ if (isset($form_result)){
 
 <?php
 /// Call APIs...
-	Callapi();	
-?>	
-	
+	Callapi();
+	Callinsolvanceyapi();
+?>
+
 	</div>
 </body>
 
 </html>
+
+
+
+
+
+
