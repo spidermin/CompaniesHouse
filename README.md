@@ -18,12 +18,9 @@ Company search data is returned in JSON and decoded. The array is then put throu
 
 If the company is either disolved or in liquidation, this information will be highlighted to the user. 
 
-
- 
-
-
 Run: 
 
+PHP version 5.6.4
 
 Assumptions: 
 
@@ -31,3 +28,18 @@ Using the Companies House public API a small app is required in order to asses t
 
 The company must be must be active in order to gain credit, however if there are any insolvencies againts the company, the company must be risk scored between 0 - 100. 
 
+After spending some time searching through company numbers on the Companies House website and not finding a single company marked with insolvencies but many with liquidation, lead me to believe that these companies may in fact be in liquidation. 
+
+When running through the insolvancy API I was able to find some insolvancy data, however I noticed that any company which had this data was in some sort of liquidation.
+
+I found three different types of liquidation data: 
+
+ - creditors-voluntary-liquidation
+
+ - members-voluntary-liquidation
+
+ - compulsory-liquidation
+ 
+ I then used these for risk scoring, sharing a score of 100. 
+ 
+ 
