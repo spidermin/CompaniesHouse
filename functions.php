@@ -18,7 +18,6 @@ $form_result = $_POST['submit'];
 $curl = curl_init();
 
 curl_setopt($curl, CURLOPT_URL, 'https://api.companieshouse.gov.uk/search/companies?q='.$trimmed_search);
-//curl_setopt($curl, CURLOPT_URL, 'https://api.companieshouse.gov.uk/company/'.$trimmed_search.'/insolvency');
 curl_setopt($curl, CURLOPT_USERPWD,"m_zHeLJNvJhlw9aRn0UL5aoGSylrOMzJ0-anvuJd");
 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET'); 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -36,6 +35,35 @@ $json = json_decode($response, true); // decode the JSON into an associative arr
 
 
 // Handle the API response below here... 
-echo '<p><pre>' . print_r($json, true) . '</pre></p>';
+//echo '<p><pre>' . print_r($json, true) . '</pre></p>';
 
+$result = $json['items'];
+
+if ($json['items'][0]['company_status'] == "active") {
+
+foreach($result as $value){	
+echo "<h2>" . $value['title']."</h2>";
+echo "<p>Company Number: " .$value['company_number']. "<br>"; 	
+echo "Company Status: " .$value['company_status']."<br>";
+echo "Address: " .$value['address_snippet']."<br>";
+echo "<p class='approved'>Credit account application approved.</p>";
+	}
+
+} if ($json['items'][0]['company_status'] == "dissolved"  ) {
+echo "<h2>" .$json['items'][0]['title']."</h2>";
+echo "<p class='dissolved'>" .$json['items'][0]['description'] . "</p>";
+echo "<p>Address: " .$json['items'][0]['address_snippet']."</p><br>";
+echo "<p class='refused'>Credit account application refused.</p>";
+
+} if ($json['items'][0]['company_status'] == "liquidation"  ) {
+echo "<h2>" .$json['items'][0]['title']."</h2>";
+echo "<p class='dissolved'>" .$json['items'][0]['description'] . "</p>";
+echo "<p>Address: " .$json['items'][0]['address_snippet']."</p>";
+
+} else if (isset($form_result)){ 
+	if ($json['total_results'] == "0" )  {
+		echo 'Company not found';
+	}
 }
+
+};
