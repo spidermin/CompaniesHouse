@@ -2,6 +2,7 @@
 
 function Callapi() {
 
+
 $search_term =  $_REQUEST['search_term']; //Get search term...
 
 $trimmed_search = str_replace(' ', '', $search_term); //Remove Spaces...
@@ -13,10 +14,12 @@ $form_result = $_POST['submit'];
 
 //echo $trimmed_search;
 
+//Company search API call..
 
 $curl = curl_init();
 
 curl_setopt($curl, CURLOPT_URL, 'https://api.companieshouse.gov.uk/search/companies?q='.$trimmed_search);
+//curl_setopt($curl, CURLOPT_URL, 'https://api.companieshouse.gov.uk/company/'.$trimmed_search.'/insolvency');
 curl_setopt($curl, CURLOPT_USERPWD,"m_zHeLJNvJhlw9aRn0UL5aoGSylrOMzJ0-anvuJd");
 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET'); 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -65,6 +68,7 @@ echo "<p>Address: " .$json['items'][0]['address_snippet']."</p>";
 	}
 }
 
+
 };
 
 ///Insolvency API call...
@@ -104,4 +108,25 @@ echo "Insolvency type: " . $value['type']."<br>";
 
 }
 
+// Switch case to handle risk score if applicable...
+
+$risk = $value['type'];
+
+switch ($risk) {
+    case "creditors-voluntary-liquidation":
+        echo "<p class='risk-low'>Risk score: 20</p>";
+        break;
+    case "members-voluntary-liquidation":
+        echo "<p class='risk-medium'>Risk score: 60</p>";
+        break;
+    case "compulsory-liquidation":
+        echo "<p class='risk-high'>Risk score: 100</p>";
+        break;
+    default:
+        echo "";
+}
+
 };
+
+
+?>
