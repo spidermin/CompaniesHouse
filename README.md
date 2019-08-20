@@ -29,6 +29,11 @@ Run:
 
 PHP version 5.6.4
 
+Edit: index.php and edit line 6 "<link rel="stylesheet" type="text/css" href="/companieshouse/style.css">" and change path to your destination. 
+
+run "index.php" Here you can enter a company number and see the app working. 
+
+
 Assumptions: 
 
 Using the Companies House public API a small app is required in order to asses the risk of lending credit to a company. 
