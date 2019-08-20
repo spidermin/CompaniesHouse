@@ -33,6 +33,7 @@ Edit: open index.php and edit line 6. Change path to your style sheet destinatio
 
 Run "index.php" Here you can enter a company number and see the app working. 
 
+API key has been left in for testing purposes only. 
 
 Assumptions: 
 
