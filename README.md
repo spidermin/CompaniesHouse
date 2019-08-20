@@ -27,3 +27,7 @@ Run:
 
 Assumptions: 
 
+Using the Companies House public API a small app is required in order to asses the risk of lending credit to a company. 
+
+The company must be must be active in order to gain credit, however if there are any insolvencies againts the company, the company must be risk scored between 0 - 100. 
+
