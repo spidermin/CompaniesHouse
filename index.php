@@ -37,6 +37,12 @@ if (isset($form_result)){
 	echo '<p class="error">Error: Please enter a company number </p><br>';
 	}
 }
+?>
+
+<?php
+/// Call APIs...
+	Callapi();
+	
 ?>	
 	
 	</div>
