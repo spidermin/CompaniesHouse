@@ -39,3 +39,7 @@ if (isset($form_result)){
 }
 ?>	
 	
+	</div>
+</body>
+
+</html>
